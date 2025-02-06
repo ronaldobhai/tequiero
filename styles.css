@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+  font-family: 'Dancing Script', cursive;
+  background-color: #ffe6e6;
+  color: #ff7eb9; /* Light pink font color */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Landing Page Styles */
+.landing-page {
+  z-index: 3; /* Ensure landing page is on top */
+}
+
+.landing-page h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.click-box {
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.click-box:hover {
+  transform: scale(1.1);
+}
+
+/* Main Page Styles */
+.main-page {
+  display: none; /* Initially hidden */
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Ensure text box is above falling emojis */
+  position: relative; /* Required for z-index to work */
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.rose {
+  font-size: 5rem;
+  margin: 20px 0;
+}
+
+/* Rose, Heart, and Sunflower Shower Animation */
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.falling-element {
+  position: absolute;
+  top: -50px;
+  font-size: 2rem;
+  animation: fall linear infinite;
+  z-index: 1; /* Falling emojis behind the text box */
+}
